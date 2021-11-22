@@ -10,9 +10,9 @@ const typeDefs = gql`
   type Animal {
     id: ID!
     slug: String!
-    img: String!
+    image: String!
     title: String!
-    rating: Float!
+    rating: Float
     price: String!
     description: [String!]!
     stock: Int!
@@ -26,6 +26,22 @@ const typeDefs = gql`
     category: String!
     slug: String!
     animals: [Animal!]!
+  }
+
+  type Mutation {
+    addAnimal(
+      slug: String!
+      image: String!
+      title: String!
+      rating: Float
+      price: String!
+      description: [String!]!
+      stock: Int!
+      onSale: Boolean
+      category: String
+    ): Animal
+
+    removeAnimal(id: ID!): Boolean!
   }
 
   type Query {

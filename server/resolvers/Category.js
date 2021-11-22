@@ -6,3 +6,13 @@ const Category = {
 };
 
 module.exports = Category;
+
+// query{
+//   category(slug: "cats") {
+//     animals {
+//       id
+//       title
+
+//     }
+//   }
+//   }
