@@ -183,4 +183,5 @@ const categories = [
 module.exports = {
   mainCards,
   animals,
+  categories,
 };
